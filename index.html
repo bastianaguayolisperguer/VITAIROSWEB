@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VITAIROS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+          <div class="coming-soon-button-container">
+  <button class="coming-soon-button">App Próximamente Disponible</button>
+</div>
+            <div class="navbar-center">
+                <ul>
+                    <li><a href="#quienes-somos">Quienes Somos</a></li>
+                    <li><a href="#vitairos">Vitairos</a></li>
+                    <li><a href="#mision">Misión y Visión</a></li>
+                    <li><a href="#contactanos">Contáctanos</a></li>
+                </ul>
+            </div>
+            <!-- Botón Hazte Socio -->
+<div class="navbar-right">
+    <a href="#" class="join-button" onclick="openModal('join-modal')">Hazte Socio</a>
+</div>
+
+<!-- Modal para Hazte Socio -->
+<div id="join-modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('join-modal')">&times;</span>
+        <h2>Únete a VITAIROS como Profesional de Salud Mental</h2>
+        <form id="join-form">
+            <div class="form-group">
+                <label for="full-name">Nombre Completo:</label>
+                <input type="text" id="full-name" name="full-name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Número de Teléfono:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="specialization">Especialización:</label>
+                <input type="text" id="specialization" name="specialization" required>
+            </div>
+            <div class="form-group">
+                <label for="experience">Años de Experiencia:</label>
+                <input type="number" id="experience" name="experience" required>
+            </div>
+            <div class="form-group">
+                <label for="license">Número de Licencia:</label>
+                <input type="text" id="license" name="license" required>
+            </div>
+            <div class="form-group">
+                <label for="bio">Biografía:</label>
+                <textarea id="bio" name="bio" rows="5" required></textarea>
+            </div>
+            <div class="button-container">
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+        </nav>
+    </header>
+
+    <main>
+        <section id="" class="hero">
+            <div class="hero-content">
+                <img src="logovit.PNG" alt="Vitairos Logo" class="logo">
+                <h1>¡Descubre VITAIROS!</h1>
+                <p>La nueva APP para tu salud mental con IA</p>
+                <p>Próximamente disponible en:</p>
+                <div class="app-stores">
+                    <img src="googleplay.png" alt="Google Play">
+                    <img src="appstore.png" alt="App Store">
+                </div>
+            </div>
+            <div class="hero-image-container">
+                <img src="log.png" alt="Phone Image" class="hero-image">
+            </div>
+        </section>
+
+        <section id="quienes-somos" class="about">
+            <div class="about-content">
+                 <div class="text-content justify-text">
+                    <h2>Quiénes Somos</h2>
+                    <p>
+                      VITAIROS es una aplicación móvil y web diseñada para abordar la creciente preocupación por la salud mental, ofreciendo acceso conveniente y personalizado a herramientas de apoyo emocional. Nuestra plataforma se centra en resolver la falta de acceso a recursos efectivos para el cuidado de la salud mental, especialmente en momentos de estrés o ansiedad. Con características como seguimiento emocional personalizado, consejos diarios basados en evaluaciones individuales y conversaciones interactivas con asistentes virtuales de inteligencia artificial las 24 horas del día, VITAIROS proporciona apoyo emocional en tiempo real, adaptado a las necesidades y preferencias de cada usuario.
+                    <p>Además, VITAIROS puede conectarte con profesionales de salud mental mediante video consultas, asegurando que cada usuario reciba el apoyo adecuado de especialistas idóneos gracias a la personalización de la aplicación. Dirigida a todas las personas que buscan mejorar su bienestar emocional y gestionar el estrés y la ansiedad, VITAIROS se distingue por su enfoque personalizado y la integración de tecnologías avanzadas de IA, ofreciendo una experiencia transformadora y única. </p>
+                    </p>
+                    <div class="button-container">
+                        <button onclick="mostrarMasDescripcion()">Más Información</button>
+                    </div>
+                </div>
+                <img src="quienes.png" alt="Descripción de la imagen" class="about-img">
+            </div>
+        </section>
+
+        <!-- Modal -->
+        <div id="mas-informacion-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Más Información sobre VITAIROS</h2>
+               <p>
+                   En el complejo panorama de la salud mental, VITAIROS se presenta como una innovadora plataforma de apoyo emocional respaldada por inteligencia artificial (IA). Diseñada para conectar a los usuarios con profesionales de salud mental de manera personalizada a través de video consultas, VITAIROS ofrece un apoyo inmediato y efectivo en momentos de necesidad.
+               </p>
+               <p>
+                   VITAIROS proporciona un asistente virtual de IA que está disponible en todo momento para ofrecer consejos, contención emocional y un espacio seguro para expresar sentimientos. Esta herramienta no solo mejora la accesibilidad al apoyo emocional, sino que también facilita una intervención temprana y continua para el bienestar mental de los usuarios.
+               </p>
+               <p>
+                   Una característica distintiva de VITAIROS es su capacidad para emparejar a los usuarios con profesionales de salud mental adecuados mediante video consultas. Esta personalización asegura que cada usuario reciba el nivel óptimo de atención y apoyo según sus necesidades específicas, mejorando así la efectividad del tratamiento y la experiencia del usuario.
+               </p>
+               <p>
+                   Con un enfoque centrado en la IA y la conexión directa con profesionales cualificados, VITAIROS no solo proporciona herramientas para el autocuidado emocional, sino que también promueve un acceso más amplio y efectivo a los servicios de salud mental. Esta combinación de tecnología avanzada y atención personalizada hace de VITAIROS una solución integral para mejorar el bienestar emocional y la calidad de vida de sus usuarios.
+               </p>
+               <p>
+                   VITAIROS se posiciona como un aliado esencial para profesionales de la salud mental y usuarios en la búsqueda de soluciones efectivas y accesibles para el cuidado emocional. Con su capacidad para ofrecer apoyo continuo y personalizado mediante IA y conexiones directas en vivo con expertos, VITAIROS abre nuevas posibilidades para el tratamiento y la gestión de la salud mental en la era digital.
+               </p>
+            </div>
+        </div>
+
+        <section id="mision" class="about">
+            <div class="about-content">
+                <div class="circle-container">
+                    <div class="circle" id="mision">
+                        <div class="circle-text">Misión</div>
+                        <div class="circle-description">
+                            <p>Involucrate</p>
+                            <a href="#" class="read-more" onclick="openModal('modal-mision')">Leer más</a>
+                        </div>
+                    </div>
+                    <div class="circle" id="vision">
+                        <div class="circle-text">Visión</div>
+                        <div class="circle-description">
+                            <p>Inspirate</p>
+                            <a href="#" class="read-more" onclick="openModal('modal-vision')">Leer más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-content">
+                   <div class="text-content justify-text">
+                    <h2>Misión y Visión</h2>
+                    <p>
+                      En VITAIROS, entendemos la importancia del bienestar emocional y la salud mental en la vida de cada individuo. Nuestra dedicación y compromiso nos han llevado a desarrollar una plataforma que no solo ofrece apoyo en momentos de necesidad, sino que también promueve un bienestar continuo y personalizado. A través de nuestra misión y visión, reflejamos nuestra pasión por transformar la manera en que las personas acceden y experimentan el cuidado de su salud mental. Explorando estos valores fundamentales, descubrirás cómo en VITAIROS trabajamos incansablemente para brindar soluciones innovadoras, accesibles y efectivas que marquen una diferencia significativa en la vida de nuestros usuarios.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modales -->
+        <div id="modal-mision" class="modal">
+            <div class="modal-content">
+
+                <span class="close" onclick="closeModal('modal-mision')">&times;</span>
+                <h2>Misión</h2>
+                <p>Nuestra misión en VITAIROS es revolucionar el bienestar emocional de las personas a través de la tecnología de inteligencia artificial. Nos dedicamos a proporcionar un acceso inmediato, personalizado y efectivo a herramientas de apoyo emocional y salud mental. A través de nuestra innovadora aplicación, empoderamos a los usuarios para gestionar el estrés, la ansiedad y otras preocupaciones emocionales, conectándolos con profesionales de salud mental cuando lo necesitan. En VITAIROS, estamos comprometidos a mejorar la calidad de vida de nuestros usuarios, ofreciendo un soporte emocional constante y personalizado, adaptado a las necesidades individuales de cada persona.</p>
+            </div>
+        </div>
+
+        <div id="modal-vision" class="modal">
+            <div class="modal-content">
+
+                <span class="close" onclick="closeModal('modal-vision')">&times;</span>
+                <h2>Visión</h2>
+                <p>Nuestra visión en VITAIROS es ser líderes mundiales en la transformación digital del bienestar emocional y la salud mental. Aspiramos a crear un mundo donde cada individuo tenga acceso a recursos de salud mental de alta calidad, sin barreras de tiempo, ubicación o estrato social. VITAIROS se posiciona como el aliado esencial en la vida de millones de personas, ofreciendo soluciones innovadoras y personalizadas que integran la inteligencia artificial con la empatía y el cuidado humano. Nos esforzamos por construir una sociedad más saludable y feliz, donde el bienestar emocional sea una prioridad y cada persona tenga las herramientas necesarias para alcanzar su máximo potencial.</p>
+            </div>
+        </div>
+
+
+        <section id="vitairos" class="features">
+          <h2>En VITAIROS encontrarás</h2>
+          <div class="feature-list">
+              <div class="feature-item">
+                  <img src="sientes.png" alt="Estado Diario">
+                  <p>Estado Diario</p>
+                  <div class="popup-info">
+             <p>Estado Diario: Registra tu estado emocional diario para un seguimiento personalizado.</p>
+           </div>
+              </div>
+              <div class="feature-item">
+                  <img src="historia.png" alt="Tu Historia">
+                  <p>Tu Historia</p>
+                  <div class="popup-info">
+             <p>Tu Historia: Visualiza tu progreso y evolución a lo largo del tiempo.</p>
+           </div>
+              </div>
+              <div class="feature-item">
+                  <img src="consejo.png" alt="Consejos Diarios">
+                  <p>Consejos Diarios</p>
+                  <div class="popup-info">
+              <p>Consejos Diarios: Recibe recomendaciones personalizadas para mejorar tu bienestar.</p>
+            </div>
+              </div>
+              <div class="feature-item">
+                  <img src="chat.png" alt="Chat con IA">
+                  <p>Chat con IA</p>
+                  <div class="popup-info">
+              <p>Chat con IA: Conversa con nuestro asistente virtual para recibir apoyo emocional.</p>
+            </div>
+              </div>
+              <div class="feature-item">
+                  <img src="estadistica.png" alt="Estadísticas de tu Salud">
+                  <p>Estadísticas de tu Salud</p>
+                  <div class="popup-info">
+              <p>Estadísticas de tu Salud: Analiza datos clave sobre tu salud emocional y física.</p>
+            </div>
+              </div>
+              <div class="feature-item">
+                  <img src="game.png" alt="Gamificación">
+                  <p>Gamificación</p>
+                  <div class="popup-info">
+              <p>Gamificación: Participa en actividades divertidas que fomentan tu bienestar.</p>
+            </div>
+              </div>
+              <div class="feature-item">
+                  <img src="citas.png" alt="Agenda de Citas">
+                  <p>Agenda de Citas</p>
+                  <div class="popup-info">
+              <p>Agenda de Citas: Organiza tus consultas y sesiones de terapia de manera eficiente.</p>
+            </div>
+              </div>
+              <div class="feature-item">
+                  <img src="formulario.png" alt="Formularios de Salud Mental">
+                  <p>Formularios de Salud Mental</p>
+                  <div class="popup-info">
+              <p>Formularios de Salud Mental: Completa evaluaciones que ayudan a personalizar tu experiencia.</p>
+            </div>
+              </div>
+          </div>
+      </section>
+
+
+        <section id="contactanos" class="contact">
+    <div class="contact-container">
+        <h2>Contáctanos</h2>
+        <form action="#" method="post" class="contact-form">
+            <div class="form-group">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <div class="button-container">
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+    </main>
+
+    <footer>
+      <p>Derechos reservados © VITAIROS 2023</p>
+      <p>Próximamente en redes sociales</p>
+      <div class="social-links">
+          <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+          <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+          <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      </div>
+  </footer>
+
+
+    <script src="scripts.js"></script>
+</body>
+</html>

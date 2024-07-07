@@ -1,0 +1,723 @@
+/* Estilos globales */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #E0F7FA;
+}
+.justify-text {
+    text-align: justify;
+}
+.modal-content p {
+    text-align: justify;
+}
+header {
+    background-color: #006064;
+    padding: 10px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    color: #fff;
+}
+.coming-soon-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.coming-soon-button {
+    background-color: #007bff; /* Ajusta este color según el diseño */
+    color: white;
+    padding: 10px 20px;
+    border: 2px solid #007bff; /* Añadir borde */
+    border-radius: 50px; /* Bordes redondeados similares a "Hazte Socio" */
+    font-size: 16px;
+    font-weight: bold; /* Negrita para que sea similar al estilo de "Hazte Socio" */
+    cursor: not-allowed;
+    opacity: 0.6;
+    transition: opacity 0.3s; /* Transición suave */
+}
+
+.coming-soon-button:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .coming-soon-button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+
+.menu-button {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #fff;
+}
+
+.navbar-left input {
+    padding: 5px;
+    border-radius: 20px;
+    border: none;
+}
+
+.navbar-center ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-center ul li {
+    margin: 0 15px;
+}
+
+.navbar-center ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.navbar-right .join-button {
+    background-color: #FF8A65;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h2 {
+    text-align: center;
+    color: #4CAF50;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Formulario */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+.button-container {
+    text-align: center;
+}
+
+.button-container button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button-container button:hover {
+    background-color: #45a049;
+}
+
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+    background: linear-gradient(to bottom, #80DEEA, #80DEEA, #006064);
+    flex-wrap: wrap; /* Asegura que los elementos se envuelvan en pantallas pequeñas */
+}
+
+.hero-content {
+    max-width: 600px;
+    text-align: left;
+    margin-right: 50px; /* Añade margen a la derecha */
+}
+
+.hero-content h1 {
+    font-size: 36px;
+    margin: 0;
+    color: #004D40;
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: #004D40;
+}
+
+.app-stores img {
+    margin: 10px;
+    max-width: 150px;
+}
+
+.logo {
+    max-width: 350px;
+    height: auto;
+}
+
+.hero-image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 400px;
+    margin-left: 50px; /* Añadimos margen a la izquierda */
+}
+
+.hero-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-image-container::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 420px;
+    height: 420px;
+    background: linear-gradient(to bottom, #80DEEA, #006064);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+/* Sección "Quiénes Somos" */
+.about {
+    padding: 50px 20px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.about-content {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Asegura que la imagen y el texto estén alineados */
+    align-items: center;
+}
+
+.text-content {
+    max-width: 500px;
+    padding: 20px;
+}
+
+.text-content h2 {
+    font-size: 28px;
+    color: #004D40;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.text-content p {
+    font-size: 16px;
+    color: #004D40;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button-container button {
+    background-color: #FF8A65;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* Estilos para la imagen */
+.about-img {
+    border-radius: 50%; /* Redondea los bordes */
+    box-shadow: 0 16px 8px rgba(0, 0, 0, 0.2); /* Agrega una sombra similar a la de los círculos */
+    max-width: 400px; /* Tamaño máximo para la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-left: 20px; /* Espacio entre el texto y la imagen */
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column; /* Cambia a diseño de columna en pantallas pequeñas */
+        align-items: center;
+    }
+
+    .about-img {
+        margin-left: 0; /* Elimina el margen en pantallas pequeñas */
+        margin-top: 20px; /* Añade espacio superior en pantallas pequeñas */
+    }
+}
+
+/* Estilos para los círculos de Misión y Visión */
+.circle-container {
+    display: flex;
+    flex-direction: column; /* Columna para apilar círculos */
+    align-items: center; /* Alinea horizontalmente */
+    margin-top: 30px; /* Espacio superior */
+}
+
+.circle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #26A69A;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra añadida */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin: 20px; /* Espacio entre círculos */
+}
+
+.circle:hover {
+    transform: scale(1.05);
+}
+
+.circle-text {
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.circle-description {
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.circle-description p {
+    margin: 10px 0;
+}
+
+/* Estilos para el botón Leer más */
+.read-more {
+    font-size: 14px;
+    color: #004D40;
+    text-decoration: none;
+    border: 2px solid #004D40;
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.read-more:hover {
+    background-color: #004D40;
+    color: #ffffff;
+}
+
+/* Modal styles */
+/* Estilos para los modales */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Estilos para los círculos */
+.circle-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Alinea los círculos verticalmente al centro */
+    align-items: flex-start; /* Alinea los círculos a la izquierda */
+    margin-top: 30px;
+}
+
+.circle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #26A69A;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 16px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin: 20px;
+}
+
+.circle:hover {
+    transform: scale(1.05);
+}
+
+.circle-text {
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.circle-description {
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.circle-description p {
+    margin: 10px 0;
+}
+
+.read-more {
+    font-size: 14px;
+    color: #004D40;
+    text-decoration: none;
+    border: 2px solid #004D40;
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.read-more:hover {
+    background-color: #004D40;
+    color: #ffffff;
+}
+
+.features {
+    padding: 50px 20px;
+    background-color: #E0F7FA;
+    text-align: center;
+}
+
+.feature-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.feature-item {
+    flex-basis: 200px;
+    text-align: center;
+    margin: 10px;
+}
+
+.feature-item img {
+    max-width: 100%;
+    height: auto;
+}
+/* Estilos para la sección "En VITAIROS encontrarás" */
+.features {
+    padding: 50px 20px;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 28px;
+    color: #004D40;
+    margin-bottom: 20px;
+    font-family: 'Your-Font-Here', sans-serif; /* Asegúrate de usar la fuente correcta */
+}
+
+.feature-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.feature-item {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    font-family: 'Your-Font-Here', sans-serif; /* Asegúrate de usar la fuente correcta */
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    padding-top: 200%; /* Mantiene la proporción de un celular */
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 20px; /* Bordes redondeados para parecerse a un celular */
+    overflow: hidden;
+}
+
+.image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegúrate de que la imagen ocupe todo el contenedor */
+}
+
+.feature-item p {
+    font-size: 16px;
+    color: #004D40;
+    margin: 0;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .feature-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-item {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .feature-item img {
+        width: 80px;
+        height: 80px;
+    }
+}
+/* Estilos mejorados para el pop-up */
+.feature-item {
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+  text-align: center;
+}
+
+.popup-info {
+  display: none; /* Oculta el pop-up por defecto */
+  position: absolute;
+  bottom: 100%; /* Ajusta la posición del pop-up */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 220px; /* Ajusta el ancho del pop-up */
+  padding: 15px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  font-size: 14px;
+  z-index: 10; /* Asegura que el pop-up esté encima */
+  text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.feature-item:hover .popup-info {
+  display: block; /* Muestra el pop-up al pasar el mouse sobre el ítem */
+}
+
+@media (max-width: 768px) {
+  .popup-info {
+    width: 180px; /* Ajusta el ancho del pop-up para pantallas pequeñas */
+    font-size: 12px; /* Ajusta el tamaño del texto para pantallas pequeñas */
+    bottom: auto; /* Elimina el ajuste de posición */
+    top: 100%; /* Ajusta la posición del pop-up en pantallas pequeñas */
+  }
+}
+/* Sección "Contáctanos" */
+.contact {
+    padding: 50px 20px;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact-container {
+    max-width: 800px;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.contact h2 {
+    font-size: 28px;
+    color: #004D40;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 16px;
+    color: #004D40;
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.button-container {
+    text-align: center;
+}
+
+.button-container button {
+    background-color: #FF8A65;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button-container button:hover {
+    background-color: #FF7043;
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        padding: 20px;
+    }
+
+    .contact h2 {
+        font-size: 24px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 14px;
+    }
+
+    .button-container button {
+        font-size: 14px;
+    }
+}
+
+footer {
+    background-color: #004D40;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: inherit;
+    margin-right: 10px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.social-links a i {
+    margin-right: 5px;
+}
+
+.social-links a:hover {
+    color: #0073b1; /* Color de ejemplo para el hover */
+}
