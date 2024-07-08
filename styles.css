@@ -524,6 +524,7 @@ header {
     transition: transform 0.3s, box-shadow 0.3s;
     text-align: center;
     font-family: 'Your-Font-Here', sans-serif; /* Asegúrate de usar la fuente correcta */
+    position: relative; /* Para posicionar el pop-up */
 }
 
 .image-container {
@@ -556,6 +557,27 @@ header {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+/* Estilos mejorados para el pop-up */
+.popup-info {
+    display: none; /* Oculta el pop-up por defecto */
+    position: absolute;
+    bottom: 100%; /* Ajusta la posición del pop-up */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 220px; /* Ajusta el ancho del pop-up */
+    padding: 15px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-size: 14px;
+    z-index: 10; /* Asegura que el pop-up esté encima */
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.feature-item:hover .popup-info {
+    display: block; /* Muestra el pop-up al pasar el mouse sobre el ítem */
+}
+
 @media (max-width: 768px) {
     .feature-list {
         flex-direction: column;
@@ -567,47 +589,46 @@ header {
         margin-bottom: 20px;
     }
 
-    .feature-item img {
-        width: 80px;
-        height: 80px;
+    ..feature-item .image-container {
+        padding-top: 200%; /* Ajuste de tamaño para las imágenes en dispositivos móviles */
+    }
+
+    .popup-info {
+        width: 90%; /* Ajusta el ancho del pop-up para pantallas pequeñas */
+        font-size: 12px; /* Ajusta el tamaño del texto para pantallas pequeñas */
+        bottom: auto; /* Elimina el ajuste de posición */
+        top: 100%; /* Ajusta la posición del pop-up en pantallas pequeñas */
+        left: 5%;
+        transform: translateX(0); /* Ajuste de posición horizontal */
     }
 }
-/* Estilos mejorados para el pop-up */
-.feature-item {
-  position: relative;
-  display: inline-block;
-  margin: 10px;
-  text-align: center;
+/* Ajustes en la sección "En VITAIROS encontrarás" para móviles */
+.hero-content {
+    padding: 1rem;
+    width: 100%;
 }
 
-.popup-info {
-  display: none; /* Oculta el pop-up por defecto */
-  position: absolute;
-  bottom: 100%; /* Ajusta la posición del pop-up */
-  left: 50%;
-  transform: translateX(-50%);
-  width: 220px; /* Ajusta el ancho del pop-up */
-  padding: 15px;
-  background-color: #ffffff;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  font-size: 14px;
-  z-index: 10; /* Asegura que el pop-up esté encima */
-  text-align: left; /* Alinea el texto a la izquierda */
+.hero-content h1 {
+    font-size: 1.5rem;
 }
 
-.feature-item:hover .popup-info {
-  display: block; /* Muestra el pop-up al pasar el mouse sobre el ítem */
+.hero-content p {
+    font-size: 1rem;
 }
 
-@media (max-width: 768px) {
-  .popup-info {
-    width: 180px; /* Ajusta el ancho del pop-up para pantallas pequeñas */
-    font-size: 12px; /* Ajusta el tamaño del texto para pantallas pequeñas */
-    bottom: auto; /* Elimina el ajuste de posición */
-    top: 100%; /* Ajusta la posición del pop-up en pantallas pequeñas */
-  }
+.hero-image-container {
+    max-width: 100%;
 }
+
+.circle-container {
+    flex-direction: column;
+    align-items: center;
+}
+
+.circle {
+    margin: 1rem 0;
+}
+
 /* Sección "Contáctanos" */
 .contact {
     padding: 50px 20px;
@@ -720,4 +741,102 @@ footer p {
 
 .social-links a:hover {
     color: #0073b1; /* Color de ejemplo para el hover */
+}
+
+
+/* Media Query para dispositivos móviles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-center ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-center ul li {
+        margin: 0.5rem 0;
+    }
+
+    .navbar-right {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .join-button {
+        margin: 0.5rem 0;
+    }
+
+    .hero-content {
+        padding: 1rem;
+        width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .hero-image-container {
+        max-width: 100%;
+    }
+
+    .circle-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .circle {
+        margin: 1rem 0;
+    }
+
+    /* Ajustes para imágenes */
+    .image {
+        width: 100%;
+        height: auto;
+        min-height: 200px; /* Tamaño mínimo para las imágenes */
+    }
+
+    /* Ajustes para pop-ups */
+    .popup {
+        width: 90%;
+        max-width: 90%;
+        padding: 1rem;
+        font-size: 1rem;
+        position: relative; /* Para controlar mejor el posicionamiento */
+        z-index: 10; /* Asegura que los pop-ups se muestren sobre otros elementos */
+        background-color: white; /* Fondo blanco para visibilidad */
+        border: 1px solid #ccc; /* Borde para distinguir los límites */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+    }
+
+    .popup h2 {
+        font-size: 1.5rem;
+    }
+
+    .popup p {
+        font-size: 1rem;
+    }
+
+    /* Posicionamiento absoluto para los pop-ups */
+    .popup {
+        position: absolute;
+        top: 10px; /* Ajusta la posición vertical */
+        left: 5%;
+        right: 5%;
+    }
+
+    /* Centrando el contenido de los pop-ups */
+    .popup-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
